@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Login | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body class="login-page">
+    <main class="login-layout">
+        <section class="login-intro"><a class="brand" href="login.html" style="color:white">Buku<span
+                    style="color:#93c5fd">Pedia</span></a>
+            <h1>Temukan buku, mulai ide baru.</h1>
+            <p>Toko buku online sederhana untuk mencari katalog, membuat pesanan, dan memantau pengiriman.</p>
+            <p class="small">Front-end demo • HTML, CSS, JavaScript</p>
+        </section>
+        <section class="login-form">
+            <h2>Selamat datang!</h2>
+            <p class="muted">Masuk ke akun BukuPedia Anda.</p>
+            <form id="loginForm">
+                <div class="field"><label for="email">Email</label><input id="email" type="email"
+                        autocomplete="username" placeholder="nama@email.com" required></div>
+                <div class="field"><label for="password">Password</label><input id="password" type="password"
+                        autocomplete="current-password" placeholder="Masukkan password" required></div><button
+                    type="submit" style="width:100%;margin-top:4px">Login</button>
+            </form>
+            <div class="login-links"><button class="link-button" type="button" data-modal="forgotModal">Lupa
+                    Password?</button><button class="link-button" type="button" data-modal="registerModal">Daftar
+                    akun</button></div>
+            <div class="notice small"><strong>Akun demo dari data.js</strong><br>rina@gmail.com /
+                rina123<br>agus@gmail.com / agus123<br>siti@gmail.com / siti123 (Admin)</div>
+        </section>
+    </main>
+    <div class="modal-backdrop" id="forgotModal">
+        <section class="modal" role="dialog" aria-modal="true" aria-labelledby="forgotTitle">
+            <div class="modal-head">
+                <h2 id="forgotTitle">Lupa Password</h2><button class="close-btn" type="button"
+                    data-close-modal>✕</button>
+            </div>
+            <p class="muted small">Masukkan email akun Anda. Fitur ini hanya simulasi front-end.</p>
+            <form id="forgotForm">
+                <div class="field"><label for="forgotEmail">Email</label><input id="forgotEmail" type="email" required
+                        placeholder="nama@email.com"></div><button type="submit">Kirim instruksi</button>
+            </form>
+        </section>
+    </div>
+    <div class="modal-backdrop" id="registerModal">
+        <section class="modal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+            <div class="modal-head">
+                <h2 id="registerTitle">Daftar Akun</h2><button class="close-btn" type="button"
+                    data-close-modal>✕</button>
+            </div>
+            <p class="muted small">Form simulasi pendaftaran. Untuk login, gunakan salah satu akun yang tersedia pada
+                data.js.</p>
+            <form id="registerForm">
+                <div class="field"><label for="regName">Nama</label><input id="regName" required
+                        placeholder="Nama lengkap"></div>
+                <div class="field"><label for="regEmail">Email</label><input id="regEmail" type="email" required
+                        placeholder="nama@email.com"></div>
+                <div class="field"><label for="regPassword">Password</label><input id="regPassword" type="password"
+                        minlength="6" required placeholder="Minimal 6 karakter"></div><button type="submit">Buat
+                    akun</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

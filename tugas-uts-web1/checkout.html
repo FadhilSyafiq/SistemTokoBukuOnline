@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pemesanan | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a
+                    class="active" href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a
+                    href="laporan.html">Laporan</a><a href="riwayat.html">Riwayat</a><button class="secondary"
+                    data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1>Pemesanan Buku</h1>
+                <p>Atur jumlah buku, isi data pemesan, lalu simpan pesanan.</p>
+            </div><a class="btn ghost" href="stok.html">+ Tambah buku dari katalog</a>
+        </section>
+        <section class="card">
+            <h2 class="section-title">Keranjang pesanan <span class="pill" id="cartCount">0</span></h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Buku</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartBody"></tbody>
+                </table>
+            </div>
+            <div class="total-line" style="margin-top:12px"><span>Total Pembayaran</span><strong id="cartTotal">Rp
+                    0</strong></div>
+        </section>
+        <section class="card" style="margin-top:20px">
+            <h2 class="section-title">Informasi pemesan & pembayaran</h2>
+            <form id="checkoutForm">
+                <div class="form-grid">
+                    <div class="field"><label for="buyerName">Nama Pemesan</label><input id="buyerName" required></div>
+                    <div class="field"><label for="buyerEmail">Email</label><input id="buyerEmail" type="email"
+                            required></div>
+                    <div class="field" style="grid-column:1/-1"><label for="buyerAddress">Alamat
+                            Pengiriman</label><textarea id="buyerAddress" rows="3" required
+                            placeholder="Jalan, kota, kode pos"></textarea></div>
+                    <div class="field"><label for="paymentMethod">Metode Pembayaran</label><select id="paymentMethod"
+                            required>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                            <option value="COD">Bayar di tempat (COD)</option>
+                        </select></div>
+                </div><button type="submit">Simpan Pesanan</button>
+            </form>
+            <div id="orderResult" class="notice hidden"><strong>Pesanan berhasil dibuat.</strong><br>Nomor pesanan:
+                <span id="orderNumber"></span><br>Total: <span id="orderTotal"></span>
+                <p class="small">Pesanan tersimpan pada browser ini dan bisa dilihat di menu Laporan atau Riwayat.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>

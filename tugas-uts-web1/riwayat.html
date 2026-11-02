@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Riwayat Transaksi | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a
+                    href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a
+                    href="laporan.html">Laporan</a><a class="active" href="riwayat.html">Riwayat</a><button
+                    class="secondary" data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1>History Transaksi</h1>
+                <p>Semua pesanan yang disimpan pada browser ini.</p>
+            </div><a class="btn" href="stok.html">Belanja buku</a>
+        </section>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No. Pesanan</th>
+                        <th>Tanggal</th>
+                        <th>Pemesan</th>
+                        <th>Jumlah Buku</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
+        </div>
+        <p id="historyEmpty" class="empty hidden">Belum ada transaksi. Pesanan yang selesai dibuat akan tampil di sini.
+        </p>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>

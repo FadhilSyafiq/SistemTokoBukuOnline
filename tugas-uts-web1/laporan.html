@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Laporan Pemesanan | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a
+                    href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a class="active"
+                    href="laporan.html">Laporan</a><a href="riwayat.html">Riwayat</a><button class="secondary"
+                    data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1>Laporan Pemesanan</h1>
+                <p>Ringkasan transaksi yang dibuat melalui halaman checkout pada browser ini.</p>
+            </div><button class="secondary" onclick="window.print()">Cetak laporan</button>
+        </section>
+        <section class="grid stats">
+            <article class="card">
+                <div class="stat-label">Jumlah Pesanan</div>
+                <div class="stat-number" id="reportCount">0</div>
+            </article>
+            <article class="card">
+                <div class="stat-label">Total Nilai Pesanan</div>
+                <div class="stat-number" id="reportRevenue">Rp 0</div>
+            </article>
+        </section>
+        <section style="margin-top:22px">
+            <h2 class="section-title">Detail pesanan</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No. Pesanan</th>
+                            <th>Tanggal</th>
+                            <th>Pemesan</th>
+                            <th>Pembayaran</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportBody"></tbody>
+                </table>
+            </div>
+            <p id="reportEmpty" class="empty hidden">Belum ada pesanan. Silakan buat pesanan melalui menu Pemesanan.</p>
+        </section>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>

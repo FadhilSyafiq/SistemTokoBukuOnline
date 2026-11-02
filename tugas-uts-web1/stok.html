@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Katalog Buku | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a href="dashboard.html">Dashboard</a><a class="active"
+                    href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a
+                    href="tracking.html">Tracking</a><a href="laporan.html">Laporan</a><a
+                    href="riwayat.html">Riwayat</a><button class="secondary" data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1>Informasi Stok & Katalog</h1>
+                <p>Data katalog ditampilkan dinamis dari variabel <code>dataKatalogBuku</code> di data.js.</p>
+            </div><a class="btn" href="checkout.html">Lihat pesanan</a>
+        </section>
+        <div class="toolbar"><input id="searchBook" type="search" placeholder="Cari judul, kode, atau jenis buku..."
+                aria-label="Cari buku"></div>
+        <section id="bookGrid" class="grid book-grid"></section>
+        <section class="card" style="margin-top:26px">
+            <h2 class="section-title">Tambah data stok baru</h2>
+            <p class="muted small">Baris baru ditambahkan menggunakan JavaScript DOM dan berlaku selama halaman aktif.
+            </p>
+            <form id="addStockForm">
+                <div class="form-grid">
+                    <div class="field"><label for="newCode">Kode Buku</label><input id="newCode" required maxlength="15"
+                            placeholder="CONTOH001"></div>
+                    <div class="field"><label for="newName">Nama Buku</label><input id="newName" required
+                            placeholder="Nama buku"></div>
+                    <div class="field"><label for="newType">Jenis Buku</label><select id="newType">
+                            <option>Buku Ajar</option>
+                            <option>Buku Referensi</option>
+                            <option>Novel</option>
+                            <option>Umum</option>
+                        </select></div>
+                    <div class="field"><label for="newEdition">Edisi</label><input id="newEdition" required value="1">
+                    </div>
+                    <div class="field"><label for="newStock">Jumlah Stok</label><input id="newStock" type="number"
+                            min="0" required value="1"></div>
+                    <div class="field"><label for="newPrice">Harga (Rp)</label><input id="newPrice" type="number"
+                            min="0" required placeholder="150000"></div>
+                </div><button type="submit">+ Tambah ke tabel</button>
+            </form>
+        </section>
+        <section style="margin-top:26px">
+            <h2 class="section-title">Tabel data stok</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kode</th>
+                            <th>Nama Buku</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>

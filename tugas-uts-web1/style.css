@@ -1,0 +1,652 @@
+:root {
+    --navy: #172554;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --ink: #1f2937;
+    --muted: #64748b;
+    --line: #e5e7eb;
+    --bg: #f8fafc;
+    --white: #fff;
+    --green: #15803d;
+    --red: #b91c1c;
+    --radius: 14px;
+    --shadow: 0 8px 28px rgba(15, 23, 42, .06)
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit
+}
+
+button,
+.btn {
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px
+}
+
+button:hover,
+.btn:hover {
+    filter: brightness(.95)
+}
+
+.btn.secondary,
+button.secondary {
+    background: #e2e8f0;
+    color: var(--ink)
+}
+
+.btn.ghost,
+button.ghost {
+    background: transparent;
+    color: var(--blue);
+    border: 1px solid #bfdbfe
+}
+
+.btn.danger,
+button.danger {
+    background: #fee2e2;
+    color: var(--red)
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.small {
+    font-size: .88rem
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto
+}
+
+.topbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.nav {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px
+}
+
+.brand {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -.5px
+}
+
+.brand span {
+    color: var(--blue)
+}
+
+.nav-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap
+}
+
+.nav-links a {
+    padding: 9px 11px;
+    border-radius: 8px;
+    color: #475569;
+    font-size: .93rem
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--blue-light);
+    color: var(--blue)
+}
+
+main {
+    padding: 32px 0 55px
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px
+}
+
+.page-heading h1 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    margin: 0 0 5px;
+    color: var(--navy)
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow)
+}
+
+.grid {
+    display: grid;
+    gap: 18px
+}
+
+.grid.stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+
+.stat-label {
+    font-size: .9rem;
+    color: var(--muted)
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-top: 4px
+}
+
+.menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.menu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform .15s
+}
+
+.menu-card:hover {
+    transform: translateY(-2px)
+}
+
+.menu-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--blue-light);
+    color: var(--blue);
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    flex-shrink: 0
+}
+
+.menu-card h3 {
+    margin: 0 0 4px
+}
+
+.menu-card p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .93rem
+}
+
+.book-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+}
+
+.book-card {
+    padding: 14px;
+    display: flex;
+    flex-direction: column
+}
+
+.book-cover {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    background: #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 12px
+}
+
+.book-card h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 0 0 7px
+}
+
+.book-card .price {
+    color: var(--blue);
+    font-weight: 800;
+    margin: 8px 0
+}
+
+.book-card .meta {
+    font-size: .82rem;
+    color: var(--muted)
+}
+
+.book-card button {
+    margin-top: auto;
+    width: 100%
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px
+}
+
+.toolbar input {
+    flex: 1;
+    min-width: 200px
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px
+}
+
+.field label {
+    font-size: .92rem;
+    font-weight: 700
+}
+
+.field input,
+.field select,
+.field textarea,
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    padding: 11px 12px;
+    background: #fff;
+    color: var(--ink)
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: var(--blue)
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px
+}
+
+th,
+td {
+    text-align: left;
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: .92rem
+}
+
+th {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: .84rem
+}
+
+tbody tr:last-child td {
+    border-bottom: 0
+}
+
+.pill {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 99px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: .8rem;
+    font-weight: 700
+}
+
+.pill.green {
+    background: #dcfce7;
+    color: #166534
+}
+
+.pill.orange {
+    background: #ffedd5;
+    color: #9a3412
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 20px;
+    align-items: start
+}
+
+.section-title {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    color: var(--navy)
+}
+
+.notice {
+    padding: 13px 15px;
+    background: var(--blue-light);
+    color: #1e40af;
+    border-radius: 10px;
+    margin: 12px 0
+}
+
+.empty {
+    text-align: center;
+    padding: 32px;
+    color: var(--muted)
+}
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: .85rem;
+    border-top: 1px solid var(--line);
+    background: white
+}
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc 55%, #dbeafe)
+}
+
+.login-layout {
+    width: min(900px, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px #0f172a1c
+}
+
+.login-intro {
+    background: var(--navy);
+    color: white;
+    padding: 45px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.login-intro h1 {
+    font-size: 2.5rem;
+    margin: 20px 0 10px
+}
+
+.login-intro p {
+    color: #cbd5e1
+}
+
+.login-form {
+    padding: 38px
+}
+
+.login-form h2 {
+    margin: 0 0 6px;
+    color: var(--navy)
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px
+}
+
+.link-button {
+    background: none;
+    border: 0;
+    color: var(--blue);
+    padding: 0;
+    font-weight: 600
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #0f172a99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 50
+}
+
+.modal-backdrop.show {
+    display: flex
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    width: min(440px, 100%);
+    box-shadow: var(--shadow)
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px
+}
+
+.modal-head h2 {
+    margin: 0
+}
+
+.close-btn {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 6px 10px
+}
+
+.progress {
+    height: 9px;
+    background: #e2e8f0;
+    border-radius: 99px;
+    overflow: hidden;
+    margin: 10px 0 20px
+}
+
+.progress span {
+    height: 100%;
+    display: block;
+    background: #2563eb;
+    border-radius: 99px
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.timeline li {
+    padding: 0 0 18px 22px;
+    border-left: 2px solid #bfdbfe;
+    position: relative
+}
+
+.timeline li:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--blue)
+}
+
+.timeline li:last-child {
+    border-left-color: transparent
+}
+
+.timeline strong {
+    display: block;
+    font-size: .88rem
+}
+
+.timeline p {
+    margin: 4px 0 0;
+    color: var(--muted)
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.total-line:last-child {
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 800
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.hidden {
+    display: none !important
+}
+
+@media(max-width:950px) {
+    .book-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+
+    .grid.stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .nav {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column
+    }
+
+    .nav-links {
+        width: 100%
+    }
+}
+
+@media(max-width:650px) {
+    main {
+        padding-top: 22px
+    }
+
+    .menu-grid,
+    .two-col,
+    .form-grid,
+    .login-layout {
+        grid-template-columns: 1fr
+    }
+
+    .login-intro {
+        padding: 28px
+    }
+
+    .login-intro h1 {
+        font-size: 2rem
+    }
+
+    .login-form {
+        padding: 26px
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .book-cover {
+        height: 180px
+    }
+
+    .page-heading {
+        flex-direction: column
+    }
+
+    .grid.stats {
+        gap: 10px
+    }
+
+    .card {
+        padding: 16px
+    }
+
+    .nav-links a {
+        font-size: .85rem;
+        padding: 8px
+    }
+}

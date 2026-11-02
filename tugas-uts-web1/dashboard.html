@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a class="active" href="dashboard.html">Dashboard</a><a
+                    href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a
+                    href="tracking.html">Tracking</a><a href="laporan.html">Laporan</a><a
+                    href="riwayat.html">Riwayat</a><button class="secondary" data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1 id="greeting">Selamat datang!</h1>
+                <p>Kelola aktivitas toko buku dari satu tempat.</p>
+            </div><span class="pill" id="userRole">User</span>
+        </section>
+        <section class="grid stats">
+            <article class="card">
+                <div class="stat-label">Judul Buku</div>
+                <div class="stat-number" id="statBooks">0</div>
+            </article>
+            <article class="card">
+                <div class="stat-label">Total Stok</div>
+                <div class="stat-number" id="statStock">0</div>
+            </article>
+            <article class="card">
+                <div class="stat-label">Pesanan Tersimpan</div>
+                <div class="stat-number" id="statOrders">0</div>
+            </article>
+            <article class="card">
+                <div class="stat-label">Akun Demo</div>
+                <div class="stat-number" id="statUsers">0</div>
+            </article>
+        </section>
+        <h2 style="margin:30px 0 16px;color:var(--navy)">Menu utama</h2>
+        <section class="grid menu-grid"><a class="card menu-card" href="stok.html">
+                <div class="menu-icon">▤</div>
+                <div>
+                    <h3>Informasi Stok / Katalog</h3>
+                    <p>Lihat buku, cari judul, dan tambahkan data stok baru.</p><span class="btn ghost">Buka katalog
+                        →</span>
+                </div>
+            </a><a class="card menu-card" href="tracking.html">
+                <div class="menu-icon">⌁</div>
+                <div>
+                    <h3>Tracking Pengiriman</h3>
+                    <p>Cek status dan riwayat perjalanan berdasarkan nomor DO.</p><span class="btn ghost">Lacak pesanan
+                        →</span>
+                </div>
+            </a><a class="card menu-card" href="laporan.html">
+                <div class="menu-icon">▥</div>
+                <div>
+                    <h3>Laporan Pemesanan</h3>
+                    <p>Lihat ringkasan jumlah pesanan dan total transaksi.</p><span class="btn ghost">Lihat laporan
+                        →</span>
+                </div>
+            </a><a class="card menu-card" href="riwayat.html">
+                <div class="menu-icon">◷</div>
+                <div>
+                    <h3>History Transaksi</h3>
+                    <p>Periksa pesanan yang dibuat selama sesi penggunaan.</p><span class="btn ghost">Buka riwayat
+                        →</span>
+                </div>
+            </a></section>
+        <div class="notice small" style="margin-top:20px">Catatan: BukuPedia menggunakan data dummy JavaScript dan
+            localStorage browser, bukan database/server.</div>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>

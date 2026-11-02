@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tracking | BukuPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav container"><a class="brand" href="dashboard.html">Buku<span>Pedia</span></a>
+            <div class="nav-links"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a
+                    href="checkout.html">Pemesanan</a><a class="active" href="tracking.html">Tracking</a><a
+                    href="laporan.html">Laporan</a><a href="riwayat.html">Riwayat</a><button class="secondary"
+                    data-logout>Keluar</button></div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h1>Tracking Pengiriman</h1>
+                <p>Masukkan nomor Delivery Order untuk melihat status dan perjalanan paket.</p>
+            </div>
+        </section>
+        <section class="card">
+            <form id="trackingForm">
+                <div class="toolbar" style="margin:0"><input id="doNumber" required placeholder="Contoh: 20230012"
+                        aria-label="Nomor Delivery Order"><button type="submit">Cari</button></div>
+            </form>
+            <p class="muted small">Nomor contoh dari data.js: <strong>20230012</strong> dan <strong>20230013</strong>.
+            </p>
+        </section>
+        <section id="trackingResult" class="hidden" style="margin-top:20px">
+            <div id="trackingDetails"></div>
+        </section>
+    </main>
+    <footer class="footer">© 2026 BukuPedia • Toko Buku Online</footer>
+</body>
+
+</html>
