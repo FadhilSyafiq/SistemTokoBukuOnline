@@ -1,7 +1,7 @@
 BUKU PEDIA - WEBSITE PEMESANAN BUKU
 
 Isi folder:
-- login.html       : Login, modal lupa password dan daftar
+- index.html       : Login, modal lupa password dan daftar
 - dashboard.html   : Dashboard, greeting waktu lokal dan navigasi
 - stok.html        : Katalog dinamis, pencarian dan tambah data stok dengan DOM
 - checkout.html    : Keranjang, ubah jumlah/hapus item, data pemesan dan pembayaran
@@ -14,13 +14,12 @@ Isi folder:
 - img/             : Lima gambar sampul buku
 
 CARA MENJALANKAN
-1. Ekstrak folder BukuPedia.
-2. Buka login.html menggunakan browser. Untuk pengalaman terbaik, gunakan ekstensi Live Server di VS Code.
-3. Login demo:
+1. Buka login.html menggunakan browser. Untuk pengalaman terbaik, gunakan ekstensi Live Server di VS Code.
+2. Login demo:
    User:  rina@gmail.com / rina123
    User:  agus@gmail.com / agus123
    Admin: siti@gmail.com / siti123
-4. Untuk tracking, gunakan nomor DO 20230012 atau 20230013.
+3. Untuk tracking, gunakan nomor DO 20230012 atau 20230013.
 
 CATATAN
 - Aplikasi ini adalah demo front-end tanpa backend/database.
